@@ -1,5 +1,8 @@
 {
   "projects": {
-    "default": "whiskey-collection-61d99"
-  }
+    "default": "whiskey-collection-61d99",
+    "react-whiskey": "whiskey-collection-61d99"
+  },
+  "targets": {},
+  "etags": {}
 }
