@@ -1,7 +1,6 @@
 import { server_calls } from "../api/server";
 import Input from "./Input"
 import { useForm } from "react-hook-form";
-import { useSubmit } from "react-router-dom";
 import { useDispatch, useStore } from "react-redux";
 import { chooseName, chooseVariety, chooseYear, choosePrice } from "../redux/slices/RootSlice";
 
@@ -19,7 +18,7 @@ const WhiskeyForm = (props: WhiskeyFormProps) => {
     if (props.id && props.id.length > 0) {
       server_calls.update(props.id[0], data);
       console.log(`Updated: ${ data } ${ props.id }`)
-      setTimeout(() => {window.location.reload()}, 3000)
+      setTimeout(() => {window.location.reload()}, 2000)
       event.target.reset()
     } else {
       dispatch(chooseName(data.name))
@@ -30,7 +29,7 @@ const WhiskeyForm = (props: WhiskeyFormProps) => {
       server_calls.create(store.getState())
       console.log((`created: ${data.name}`));
       
-      setTimeout(() => {window.location.reload()}, 3000)
+      setTimeout(() => {window.location.reload()}, 2000)
     }
   }
 
